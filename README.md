@@ -35,3 +35,7 @@ npm run e2e
 # 执行所有测试
 npm test
 ```
+
+- [jenkins自动部署vue(git仓库更改请看这个)](https://www.cnblogs.com/lifefriend/p/10686461.html)
+- [Element UI](https://element.eleme.cn/#/zh-CN)
+- [安装最新版本nodejs和npm](https://github.com/nodesource/distributions#debinstall)
