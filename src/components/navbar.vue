@@ -10,9 +10,11 @@
         </a>
       </el-col>
       <el-col :span="20">
-        <el-menu :default-active="activeIndex" @select="handleSelect" mode="horizontal" style="border-bottom: none">
-          <el-menu-item index="1">关于我们</el-menu-item>
-          <el-menu-item index="2"><a href="http://git.szutic.club" style="text-decoration: none">代码库</a></el-menu-item>
+        <el-menu :default-active="activeIndex" @select="handleSelect" mode="horizontal" style="border-bottom: none" router="true">
+          <el-menu-item index="1" route="/aboutus">关于我们</el-menu-item>
+          <el-menu-item index="2" route="/joinus">加入我们</el-menu-item>
+          <el-menu-item index="3"><a href="http://git.szutic.club" style="text-decoration: none">代码库</a></el-menu-item>
+          <el-menu-item index="4"><a href="http://cloud.szutic.club" style="text-decoration: none">社团云盘</a></el-menu-item>
         </el-menu>
       </el-col>
     </el-row>
