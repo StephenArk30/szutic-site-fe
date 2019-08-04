@@ -4,10 +4,14 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history', // 去掉url中的#
   routes: [
     {
-      path: '',
+      path: '/',
       name: '深大腾创',
+      meta: {
+        title: '深大腾创'
+      },
       component: () => import('../views/index')
     }
   ]

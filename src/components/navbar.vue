@@ -20,21 +20,21 @@
 </template>
 
 <script>
-  import logo from '../assets/brand.png'
+import logo from '../assets/brand.png'
 
-  export default {
-    data () {
-      return {
-        activeIndex: '0',
-        logo
-      }
-    },
-    methods: {
-      handleSelect (key, keyPath) {
-        console.log(key, keyPath)
-      }
+export default {
+  data () {
+    return {
+      activeIndex: '0',
+      logo
+    }
+  },
+  methods: {
+    handleSelect (key, keyPath) {
+      console.log(key, keyPath)
     }
   }
+}
 </script>
 
 <style>
