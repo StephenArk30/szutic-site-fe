@@ -2,7 +2,7 @@
   <div class="navbar">
     <el-row>
       <el-col :span="4" style="height: 60px">
-        <a href="http://www.szutic.club">
+        <a href="..">
           <el-image
             :src="logo"
             class="logo"
@@ -10,8 +10,18 @@
         </a>
       </el-col>
       <el-col :span="20">
-        <el-menu :default-active="activeIndex" @select="handleSelect" mode="horizontal" style="border-bottom: none" router="true">
-          <el-menu-item index="1" route="/aboutus">关于我们</el-menu-item>
+        <el-menu :default-active="activeIndex"
+                 :default-openeds="activeIndex2"
+                 @select="handleSelect"
+                 mode="horizontal"
+                 style="border-bottom: none"
+                 router="true">
+          <el-submenu index="1">
+            <template slot="title">关于我们</template>
+            <el-menu-item index="intro" route="/aboutus/intro">社团介绍</el-menu-item>
+            <el-menu-item index="struct" route="/aboutus/struct">社团结构</el-menu-item>
+            <el-menu-item index="activity" route="/aboutus/activity">日常活动</el-menu-item>
+          </el-submenu>
           <el-menu-item index="2" route="/joinus">加入我们</el-menu-item>
           <el-menu-item index="3"><a href="http://git.szutic.club" style="text-decoration: none">代码库</a></el-menu-item>
           <el-menu-item index="4"><a href="http://cloud.szutic.club" style="text-decoration: none">社团云盘</a></el-menu-item>
@@ -29,6 +39,15 @@ export default {
     return {
       activeIndex: '0',
       logo
+    }
+  },
+  computed: {
+    activeIndex2: {
+      get: function () {
+        return [this.$route.params.active]
+      },
+      set: function () {
+      }
     }
   },
   methods: {

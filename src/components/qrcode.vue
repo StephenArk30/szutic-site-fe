@@ -42,5 +42,6 @@ export default {
     padding: 3px;
     align-content: center;
     display: flex;
+    z-index: 99;
   }
 </style>

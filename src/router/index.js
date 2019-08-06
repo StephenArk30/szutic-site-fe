@@ -15,7 +15,7 @@ export default new Router({
       component: () => import('../views/index')
     },
     {
-      path: '/aboutus',
+      path: '/aboutus/:active',
       name: '关于我们',
       meta: {
         title: '关于我们'
