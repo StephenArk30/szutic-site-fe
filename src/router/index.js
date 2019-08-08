@@ -29,6 +29,14 @@ export default new Router({
         title: '加入我们'
       },
       component: () => import('../views/joinUs')
+    },
+    {
+      path: '/joinus/applicant',
+      name: '报名',
+      meta: {
+        title: '报名'
+      },
+      component: () => import('../views/applicant')
     }
   ]
 })

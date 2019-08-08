@@ -6,6 +6,9 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
+import api from './utils/api.js'
+
+Vue.prototype.$api = api
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)

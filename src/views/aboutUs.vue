@@ -7,9 +7,10 @@
       <div class="panel">
         <el-collapse v-model="activeName" accordion="true" style="border: none">
           <el-collapse-item title="社团简介" name="1" style="border: none">
-            <div class="card">深圳大学腾讯创新俱乐部简称深大腾创，又叫“SZUTIC”。腾创是以互联网产品创新为
-              核心的活动的高校学生社团，是深圳大学与腾讯公司直接对接举办活动的社团，是深圳大学
-              与腾讯公司进行双向交流的桥梁。</div>
+            <div class="card">
+              <div>深圳大学腾讯创新俱乐部简称深大腾创(Tencent Innovation Club of Shenzhen University, SZUTIC)。腾创是以互联网产品创新为核心的活动的高校学生社团，是深圳大学与腾讯公司直接对接举办活动的社团，是深圳大学与腾讯公司进行双向交流的桥梁。</div>
+              <div>社团以技术为导向，以创新互联网项目为基本，锻炼成员的组织能力、创新思维、编程、多媒体等技术，积累项目经验。</div>
+            </div>
           </el-collapse-item>
           <el-collapse-item title="社团历史" name="2">
             <div class="card">
@@ -63,7 +64,7 @@
               </div>
             </el-card>
           </el-row>
-          <el-row style="margin-top: 10px">
+          <el-row style="margin: 10px 0 20px">
             <el-card>
               <div slot="header" class="clearfix">
                 <el-image :src="logo" class="icon"/>
