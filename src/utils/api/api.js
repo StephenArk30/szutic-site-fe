@@ -1,5 +1,5 @@
 // 配置API接口地址
-const root = require('../config').api
+const root = require('../../config').api
 // 引用axios
 const axios = require('axios/index')
 // 自定义判断元素类型JS
