@@ -7,7 +7,8 @@
         v-if="bonus.difficulty"
         v-model="bonus.difficulty"
         disabled
-        :show-text="text"
+        show-text
+        :texts="text"
         text-color="#ff9900"/>
     </div>
     <div class="desc">{{bonus.desc}}</div>

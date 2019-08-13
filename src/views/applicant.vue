@@ -86,7 +86,7 @@ export default {
   name: 'applicant',
   data () {
     return {
-      bonus_type: [],
+      majors: [],
       form: {
         name: '',
         gender: null,

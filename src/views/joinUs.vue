@@ -11,7 +11,7 @@
       </el-col>
     </el-row>
     <div style="width: 80%; margin: auto; text-align: left">
-      <el-steps align-center active="4">
+      <el-steps align-center :active="4">
         <el-step title="填写报名表"></el-step>
         <el-step title="关注公众号"></el-step>
         <el-step title="加入招新群"></el-step>

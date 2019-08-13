@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="padding-top: 1px">
       <el-card
         class="box-card"
         v-for="(bonus, index) in bonuses"
@@ -14,7 +14,8 @@
               v-if="bonus.difficulty"
               v-model="bonus.difficulty"
               disabled
-              :show-text="text"
+              show-text
+              :texts="text"
               text-color="#ff9900"/>
           </el-col>
           <el-col :span="4">
@@ -68,7 +69,7 @@ export default {
 <style scoped>
   .box-card {
     width: 480px;
-    margin: 80px auto;
+    margin: 30px auto;
   }
   .desc {
     font-size: 14px;

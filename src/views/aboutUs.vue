@@ -5,7 +5,7 @@
     <el-tab-pane disabled="disabled"/>
     <el-tab-pane label="社团介绍" name="intro">
       <div class="panel">
-        <el-collapse v-model="activeName" accordion="true" style="border: none">
+        <el-collapse v-model="activeName" accordion style="border: none">
           <el-collapse-item title="社团简介" name="1" style="border: none">
             <div class="card">
               <div>深圳大学腾讯创新俱乐部简称深大腾创(Tencent Innovation Club of Shenzhen University, SZUTIC)。腾创是以互联网产品创新为核心的活动的高校学生社团，是深圳大学与腾讯公司直接对接举办活动的社团，是深圳大学与腾讯公司进行双向交流的桥梁。</div>
@@ -78,7 +78,7 @@
         </el-col>
       </div>
     </el-tab-pane>
-    <el-tab-pane label="日常活动" name="activity">日常活动</el-tab-pane>
+    <el-tab-pane label="日常活动" name="activity">暂未开放，敬请期待！</el-tab-pane>
   </el-tabs>
 </template>
 
