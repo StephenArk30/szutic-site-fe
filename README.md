@@ -46,6 +46,7 @@ npm test
 - [jenkins自动部署vue(git仓库更改请看这个)](https://www.cnblogs.com/lifefriend/p/10686461.html)
 - [Element UI](https://element.eleme.cn/#/zh-CN)
 - [linux安装最新版本nodejs和npm](https://github.com/nodesource/distributions#debinstall)
+- [用axios与后端通信](https://blog.csdn.net/qq_36752728/article/details/83477968)
 
 ## 代码结构
 

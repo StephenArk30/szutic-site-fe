@@ -12,7 +12,25 @@ import qrcode from './components/qrcode'
 
 export default {
   name: 'App',
-  components: {navbar, qrcode}
+  components: {navbar, qrcode},
+  created () {
+    this.$api.get('test', null,
+      res => {
+        this.$message({
+          showClose: true,
+          message: res.msg,
+          type: 'success'
+        })
+      },
+      err => {
+        this.$message({
+          showClose: true,
+          message: err,
+          type: 'error'
+        })
+      }
+    )
+  }
 }
 </script>
 

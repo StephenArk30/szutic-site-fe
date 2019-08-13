@@ -1,7 +1,8 @@
 // 配置API接口地址
-var root = 'http://www.szutic.club:8001/api'
+// var root = 'http://www.szutic.club:8001/api'
+var root = 'http://localhost:8001/api'
 // 引用axios
-var axios = require('axios')
+var axios = require('axios/index')
 // 自定义判断元素类型JS
 function toType (obj) {
   return ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
@@ -33,6 +34,7 @@ function apiAxios (method, url, params, success, failure) {
     data: method === 'POST' || method === 'PUT' ? params : null,
     params: method === 'GET' || method === 'DELETE' ? params : null,
     baseURL: root,
+    headers: {'Content-Type': 'application/json'},
     withCredentials: false
   })
     .then(function (res) {
@@ -41,17 +43,12 @@ function apiAxios (method, url, params, success, failure) {
           success(res.data)
         }
       } else {
-        if (failure) {
-          failure(res.data)
-        } else {
-          window.alert('error: ' + JSON.stringify(res.data))
-        }
+        failure('连接失败: ' + JSON.stringify(res.data))
       }
     })
     .catch(function (err) {
-      let res = err.response
       if (err) {
-        window.alert('api error, HTTP CODE: ' + res.status)
+        failure('连接失败，请检查网络连接')
       }
     })
 }

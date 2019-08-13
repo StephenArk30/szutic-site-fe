@@ -37,6 +37,38 @@ export default new Router({
         title: '报名'
       },
       component: () => import('../views/applicant')
+    },
+    {
+      path: '/joinus/bonus',
+      name: '加分题',
+      meta: {
+        title: '加分题'
+      },
+      component: () => import('../views/bonus')
+    },
+    {
+      path: '/joinus/publishbonus',
+      name: '发布题目',
+      meta: {
+        title: '发布题目'
+      },
+      component: () => import('../views/publishBonus')
+    },
+    {
+      path: '/joinus/bonuslist/:type',
+      name: '题目列表',
+      meta: {
+        title: '题目列表'
+      },
+      component: () => import('../views/bonusList')
+    },
+    {
+      path: '/joinus/bonusdetail/:id',
+      name: '题目详情',
+      meta: {
+        title: '题目详情'
+      },
+      component: () => import('../views/bonusDetail')
     }
   ]
 })

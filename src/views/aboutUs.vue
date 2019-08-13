@@ -31,7 +31,7 @@
     <el-tab-pane label="社团结构" name="struct">
       <div class="vmid">
         <el-col :span="6">
-          <el-card>
+          <el-card shadow="hover">
             <div slot="header" class="clearfix">
               <el-image :src="logo" class="icon"/>
               <div>主席团</div>
@@ -43,7 +43,7 @@
         </el-col>
         <el-col :span="8" :offset="2">
           <el-row>
-            <el-card>
+            <el-card shadow="hover">
               <div slot="header" class="clearfix">
                 <el-image :src="logo" class="icon"/>
                 <div>策划部</div>
@@ -54,7 +54,7 @@
             </el-card>
           </el-row>
           <el-row style="margin-top: 10px">
-            <el-card>
+            <el-card shadow="hover">
               <div slot="header" class="clearfix">
                 <el-image :src="logo" class="icon"/>
                 <div>运营部</div>
@@ -65,7 +65,7 @@
             </el-card>
           </el-row>
           <el-row style="margin: 10px 0 20px">
-            <el-card>
+            <el-card shadow="hover">
               <div slot="header" class="clearfix">
                 <el-image :src="logo" class="icon"/>
                 <div>设计部</div>
