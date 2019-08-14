@@ -22,7 +22,7 @@
           <el-collapse-item title="社团LOGO" name="3">
             <el-row class="card">
               <el-col :span="5"><el-image :src="logo" style="width: 120px"/></el-col>
-              <el-col :span="19"><div style="text-align: left">blablablabla</div></el-col>
+              <el-col :span="19"><div style="text-align: left">秉持着创新的念想，我们将社团logo完善，以优美的线条形状表达“TIC”，还延续了腾讯公司logo的四种颜色，象征着我们与腾讯公司的紧密联系，形似竖琴(古代箜篌)的logo更是设计者希望社团可以创造佳绩，“演奏美好乐章”。</div></el-col>
             </el-row>
           </el-collapse-item>
         </el-collapse>

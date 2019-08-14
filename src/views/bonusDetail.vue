@@ -29,7 +29,9 @@ export default {
   name: 'bonusDetail',
   data () {
     return {
-      bonus: {},
+      bonus: {
+        content: ''
+      },
       text: ['贼简单', '简单', '一般', '难', '神仙题']
     }
   },

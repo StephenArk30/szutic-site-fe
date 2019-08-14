@@ -18,8 +18,8 @@
         <div class="footer-col">
           <div class="title">联系我们</div>
           <div>邮箱: szutic@qq.com</div>
-          <div><a>github: xxxx</a></div>
-          <div><a>官方微信: xxxx</a></div>
+          <div><a href="https://github.com/tic-szu" target="_blank">GitHub: github.com/tic-szu</a></div>
+          <div>官方微信: 深大TIC</div>
         </div>
         <div class="footer-col">
           <div class="title">快速链接</div>
@@ -107,7 +107,7 @@ export default {
   .footer-col {
     text-align: left;
     height: 100%;
-    border-left: 1px solid #9b9b9b;
+    border-left: 1px solid #cbcbcb;
     padding-left: 20px;
     margin-left: 20px;
     width: 150px;

@@ -64,8 +64,12 @@ npm test
 |	├── views \\ 页面
 |	├── router \\ 路由
 |	|	├── index.js \\ 新增页面后要在这里加入路由
+|	├── utils \\ 公用方法
+|	|	├── api \\ 与后端通信的方法
+|	|	| ├── api.js \\ axios封装
 |	├── App.vue \\ app页面
 |	├── main.js \\ app入口
+|	├── config.js \\ 一些配置项，例如后端地址
 ├── README \\ 使用说明
 ├── .gitignore \\ 不想让git跟踪的文件列表
 ```
