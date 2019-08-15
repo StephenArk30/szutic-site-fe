@@ -33,7 +33,7 @@
           <div>方舟 | 林挺 | 黄心怡 | 赵咏茵 | 赖泽锋</div>
         </div>
       </div>
-      <div style="margin: 10px">备案号: xxxx</div>
+      <div style="margin: 10px 0 0 0; color: #9b9b9b">备案号: -</div>
     </div>
   </div>
 </template>

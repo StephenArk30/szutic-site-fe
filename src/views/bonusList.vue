@@ -1,5 +1,5 @@
 <template>
-    <div style="padding-top: 1px">
+    <div style="padding-top: 1px; min-height: 100%" v-loading="loading">
       <el-card
         class="box-card"
         v-for="(bonus, index) in bonuses"
@@ -40,7 +40,8 @@ export default {
   data () {
     return {
       bonuses: [],
-      text: ['贼简单', '简单', '一般', '难', '神仙题']
+      text: ['贼简单', '简单', '一般', '难', '神仙题'],
+      loading: true
     }
   },
   created () {
@@ -48,6 +49,7 @@ export default {
     this.$api.get('getBonusByType', {type},
       res => {
         this.bonuses = res.bonus
+        this.loading = false
       },
       err => {
         this.$message({

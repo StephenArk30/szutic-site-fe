@@ -9,21 +9,26 @@
       <p>正文：作品介绍、作品链接（如果有）、你的学习和制作过程</p>
       <p>附件：源文件（代码或多媒体压缩包），如果你的项目可以直接在网上观看，请在正文里附链接，无需源文件</p>
     </div>
-    <el-row class="bonus_block" v-for="(type, index) in bonus_type" :key="index">
-      <el-card :body-style="{ padding: '0px' }" shadow="hover" @click.native="toList(type.id)">
-        <el-row>
-          <el-col :span="16">
-            <img :src="type.cover" class="cover">
-          </el-col>
-          <el-col :span="8" style="text-align: left">
-            <div style="padding: 14px;">
-              <div style="margin: 10px 0 7px 0; font-size: 20px">{{type.title}}</div>
-              <div class="desc">{{ type.desc }}</div>
-            </div>
-          </el-col>
-        </el-row>
-      </el-card>
-    </el-row>
+    <div v-loading="loading" style="min-height: 100px">
+      <el-row
+        class="bonus_block"
+        v-for="(type, index) in bonus_type"
+        :key="index">
+        <el-card :body-style="{ padding: '0px' }" shadow="hover" @click.native="toList(type.id)">
+          <el-row>
+            <el-col :span="16">
+              <img :src="type.cover" class="cover">
+            </el-col>
+            <el-col :span="8" style="text-align: left">
+              <div style="padding: 14px;">
+                <div style="margin: 10px 0 7px 0; font-size: 20px">{{type.title}}</div>
+                <div class="desc">{{ type.desc }}</div>
+              </div>
+            </el-col>
+          </el-row>
+        </el-card>
+      </el-row>
+    </div>
   </div>
 </template>
 
@@ -32,13 +37,15 @@ export default {
   name: 'bonus',
   data () {
     return {
-      bonus_type: []
+      bonus_type: [],
+      loading: true
     }
   },
   created () {
     this.$api.get('getBonusType', null,
       res => {
         this.bonus_type = res.bonus_types
+        this.loading = false
       },
       err => {
         this.$message({

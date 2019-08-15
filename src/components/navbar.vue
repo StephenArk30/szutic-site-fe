@@ -23,8 +23,8 @@
             <el-menu-item index="activity" route="/aboutus/activity">日常活动</el-menu-item>
           </el-submenu>
           <el-menu-item index="2" route="/joinus">加入我们</el-menu-item>
-          <el-menu-item index="3"><a href="http://git.szutic.club" target="_blank" style="text-decoration: none">代码库</a></el-menu-item>
-          <el-menu-item index="4"><a href="http://cloud.szutic.club" target="_blank" style="text-decoration: none">社团云盘</a></el-menu-item>
+          <el-menu-item index="3" route="/gitguide"><a href="http://git.szutic.club" target="_blank" style="text-decoration: none">代码库</a></el-menu-item>
+          <el-menu-item index="4" route="/cloudguide"><a href="http://cloud.szutic.club" target="_blank" style="text-decoration: none">社团云盘</a></el-menu-item>
         </el-menu>
       </el-col>
     </el-row>

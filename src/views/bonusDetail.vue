@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" v-loading="loading">
     <h1>{{bonus.title}}</h1>
     <div style="display: flex; margin: auto; width: fit-content">
       <div>难度</div>
@@ -32,7 +32,8 @@ export default {
       bonus: {
         content: ''
       },
-      text: ['贼简单', '简单', '一般', '难', '神仙题']
+      text: ['贼简单', '简单', '一般', '难', '神仙题'],
+      loading: true
     }
   },
   computed: {
@@ -45,6 +46,7 @@ export default {
     this.$api.get('getBonusById', {id},
       res => {
         this.bonus = res.bonus
+        this.loading = false
       },
       err => {
         this.$message({

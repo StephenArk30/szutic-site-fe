@@ -69,6 +69,22 @@ export default new Router({
         title: '题目详情'
       },
       component: () => import('../views/bonusDetail')
+    },
+    {
+      path: '/gitguide',
+      name: '深大腾创代码库',
+      meta: {
+        title: '深大腾创代码库'
+      },
+      component: () => import('../views/gitguide')
+    },
+    {
+      path: '/cloudguide',
+      name: '社团云盘',
+      meta: {
+        title: '社团云盘'
+      },
+      component: () => import('../views/cloudguide')
     }
   ]
 })
