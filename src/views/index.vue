@@ -33,7 +33,7 @@
           <div>方舟 | 林挺 | 黄心怡 | 赵咏茵 | 赖泽锋</div>
         </div>
       </div>
-      <div style="margin: 10px 0 0 0; color: #9b9b9b">备案号: -</div>
+      <div style="margin: 10px 0 0 0; color: #9b9b9b"><a href="http://www.beian.miit.gov.cn">粤ICP备19086225号</a></div>
     </div>
   </div>
 </template>
