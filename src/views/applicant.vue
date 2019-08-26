@@ -39,12 +39,13 @@
             <el-radio-button :label="2">设计部</el-radio-button>
           </el-radio-group>
         </el-form-item>
-        <el-form-item label="第二志愿" :rules="req" prop="secondDepart">
+        <el-form-item label="第二志愿" :rules="req" prop="secondDepart" style="margin-bottom: 0">
           <el-radio-group v-model="form.secondDepart">
             <el-radio-button :label="0">策划部</el-radio-button>
             <el-radio-button :label="1">运营部</el-radio-button>
             <el-radio-button :label="2">设计部</el-radio-button>
           </el-radio-group>
+          <div style="margin-bottom: 0; color: #888888;">与第一志愿一致视为不服从调剂</div>
         </el-form-item>
         <el-form-item label="简介" :rules="req" prop="intro">
           <el-input type="textarea"
@@ -73,6 +74,12 @@
                     show-word-limit
           ></el-input>
         </el-form-item>
+        <el-form-item label="其他社团">
+          <el-input v-model="form.otherClubs"
+                    placeholder="是否有报名其他社团 (逗号隔开)"
+                    maxlength="40"
+                    show-word-limit></el-input>
+        </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="onSubmit('form')">立即报名</el-button>
           <el-button @click="onCancel">取消</el-button>
@@ -98,7 +105,8 @@ export default {
         skills: '',
         wechat: '',
         firstDepart: 0,
-        secondDepart: 1
+        secondDepart: 1,
+        otherClubs: ''
       },
       req: {required: true, message: '请填写带*号字段'},
       num: {type: 'number', message: '必须为数字值'}

@@ -32,8 +32,20 @@
           <div class="title">贡献者</div>
           <div>方舟 | 林挺 | 黄心怡 | 赵咏茵 | 赖泽锋</div>
         </div>
+        <div class="footer-col">
+          <div class="title">友情链接</div>
+          <div><a href="https://www.szu.edu.cn">深圳大学</a></div>
+          <div><a href="https://www1.szu.edu.cn/szu.asp">深圳大学内部网</a></div>
+          <div><a href="https://www.qq.com">腾讯首页</a></div>
+          <div><a href="https://ur.tencent.com/">腾讯高校合作</a></div>
+        </div>
       </div>
-      <div style="margin: 10px 0 0 0; color: #9b9b9b"><a href="http://www.beian.miit.gov.cn">粤ICP备19086225号</a></div>
+      <div style="margin: 10px 0 0 0; color: #9b9b9b">
+        <a
+          href="http://www.beian.miit.gov.cn"
+          style="text-decoration: none"
+        >粤ICP备19086225号</a>
+      </div>
     </div>
   </div>
 </template>
