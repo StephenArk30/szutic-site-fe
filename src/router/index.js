@@ -85,6 +85,14 @@ export default new Router({
         title: '社团云盘'
       },
       component: () => import('../views/cloudguide')
+    },
+    {
+      path: '/tool/sendsms',
+      name: '群发短信',
+      meta: {
+        title: '群发短信'
+      },
+      component: () => import('../views/sendSMS')
     }
   ]
 })

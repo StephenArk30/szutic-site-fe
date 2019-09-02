@@ -74,11 +74,12 @@
                     show-word-limit
           ></el-input>
         </el-form-item>
-        <el-form-item label="其他社团">
+        <el-form-item label="其他社团" :rules="req">
           <el-input v-model="form.otherClubs"
-                    placeholder="是否有报名其他社团 (逗号隔开)"
+                    placeholder="是否有报名其他社团 (逗号隔开，没有填无)"
                     maxlength="40"
-                    show-word-limit></el-input>
+                    show-word-limit
+          ></el-input>
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="onSubmit('form')">立即报名</el-button>
