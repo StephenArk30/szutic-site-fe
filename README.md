@@ -4,6 +4,8 @@
 \
 > 深圳大学腾讯创新俱乐部官网前端
 
+[深大腾创官网](http://www.szutic.club)
+
 ## 操作指南
 
 ### Webstorm或Phpstorm (推荐使用)
@@ -77,4 +79,4 @@ npm test
 ## 注意事项
 
 - 假如用webstorm提交到git，建议不要勾选reformat code和rearrange code
-- 提交后请到www.szutic.club:9731查看jenkins部署情况
+- 提交后请到jenkins.szutic.club查看jenkins部署情况
