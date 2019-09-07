@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import slogan from '../components/slogan'
+import slogan from '../../components/slogan'
 
 export default {
   name: 'joinUs',

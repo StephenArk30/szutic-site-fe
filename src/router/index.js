@@ -28,7 +28,7 @@ export default new Router({
       meta: {
         title: '加入我们'
       },
-      component: () => import('../views/joinUs')
+      component: () => import('../views/joinUs/joinUs')
     },
     {
       path: '/joinus/applicant',
@@ -36,7 +36,15 @@ export default new Router({
       meta: {
         title: '报名'
       },
-      component: () => import('../views/applicant')
+      component: () => import('../views/joinUs/applicant')
+    },
+    {
+      path: '/joinus/applicant/get',
+      name: '已报名',
+      meta: {
+        title: '已报名'
+      },
+      component: () => import('../views/joinUs/getApplicant')
     },
     {
       path: '/joinus/bonus',
@@ -44,7 +52,7 @@ export default new Router({
       meta: {
         title: '加分题'
       },
-      component: () => import('../views/bonus')
+      component: () => import('../views/bonus/bonus')
     },
     {
       path: '/joinus/publishbonus',
@@ -52,7 +60,7 @@ export default new Router({
       meta: {
         title: '发布题目'
       },
-      component: () => import('../views/publishBonus')
+      component: () => import('../views/bonus/publishBonus')
     },
     {
       path: '/joinus/bonuslist/:type',
@@ -60,7 +68,7 @@ export default new Router({
       meta: {
         title: '题目列表'
       },
-      component: () => import('../views/bonusList')
+      component: () => import('../views/bonus/bonusList')
     },
     {
       path: '/joinus/bonusdetail/:id',
@@ -68,7 +76,7 @@ export default new Router({
       meta: {
         title: '题目详情'
       },
-      component: () => import('../views/bonusDetail')
+      component: () => import('../views/bonus/bonusDetail')
     },
     {
       path: '/gitguide',

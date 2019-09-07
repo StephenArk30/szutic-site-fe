@@ -52,6 +52,20 @@
           <el-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload" :disabled="haveNoFile">上传到服务器</el-button>
           <div slot="tip" class="el-upload__tip">只能上传csv/xlsx文件</div>
         </el-upload>
+        <el-button @click="getResponse" style="margin-top: 20px">拉取回复</el-button>
+        <el-table
+          :data="reply.data"
+          border
+          max-height="300"
+          style="width: 100%; margin-bottom: 20px">
+          <el-table-column
+            v-for="item in replyColumn"
+            v-bind:key="item.id"
+            :prop="item.prop"
+            :label="item.label"
+          >
+          </el-table-column>
+        </el-table>
       </el-form>
     </div>
 </template>
@@ -75,7 +89,22 @@ export default {
       uploadData: {
         smsId: '',
         token: ''
-      }
+      },
+      reply: [],
+      replyColumn: [
+        {
+          prop: 'mobile',
+          label: '手机号'
+        },
+        {
+          prop: 'text',
+          label: '回复内容'
+        },
+        {
+          prop: 'time',
+          label: '时间戳'
+        }
+      ]
     }
   },
   methods: {
@@ -153,6 +182,24 @@ export default {
         }
         fileReader.readAsBinaryString(files[0])
       })
+    },
+    getResponse () {
+      this.$api.get('sms/response',
+        {
+          id: this.uploadData.smsId,
+          token: this.uploadData.token
+        },
+        res => {
+          this.reply = res.resData
+        },
+        err => {
+          this.$message({
+            showClose: true,
+            message: err,
+            type: 'error'
+          })
+        }
+      )
     }
   },
   created () {
