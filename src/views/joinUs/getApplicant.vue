@@ -13,7 +13,7 @@
       <el-table
         :data="tableData"
         border
-        max-height="300"
+        max-height="1000"
         style="width: 100%; margin-bottom: 20px">
         <el-table-column
           v-for="item in tableColumn"

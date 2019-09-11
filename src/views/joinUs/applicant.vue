@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-      <div class="tips">带*为必填，你可以多次提交报名表，我们将参考最新的提交。</div>
+      <div class="tips">带*为必填，你可以多次提交报名表，我们将参考最新的提交。<a href="./applicant/get">查看报名情况</a></div>
       <el-form ref="form" :model="form" label-width="80px">
         <el-form-item label="姓名" :rules="req" prop="name">
           <el-input v-model="form.name"></el-input>
