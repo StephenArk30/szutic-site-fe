@@ -1,5 +1,7 @@
 # szutic-site-fe
 
+**本项目已迁移至[深大腾创代码库](http://git.szutic.club/SZUTIC-ADMIN/szutic-site-fe)，此处不再更新**
+
 > Official website frontend of Tencent innovation Club, Shenzhen University
 \
 > 深圳大学腾讯创新俱乐部官网前端
